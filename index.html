@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content=""ir=edge>
+        <title>Forms</title>
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <!-- <script>
+            function sendData () {
+              // (A) GET FORM DATA
+              var data = new FormData();
+              data.append("Id", document.getElementById("myId").value);
+              data.append("name", document.getElementById("myName").value);
+              data.append("username", document.getElementById("myUsername").value);
+              data.append("email", document.getElementById("myEmail").value);
+        
+              // (B) INIT FETCH POST
+              fetch("user.php", {
+                action: "https://jsonplaceholder.typicode.com/users",
+                method: "POST",
+                body: data
+              })
+        
+              // (C) RETURN SERVER RESPONSE AS TEXT
+              .then((result) => {
+                if (result.status != 200) { throw new Error("Bad Server Response"); }
+                return result.text();
+              })
+        
+              // (D) SERVER RESPONSE
+              .then((response) => {
+                console.log(response);
+              })
+        
+              // (E) HANDLE ERRORS - OPTIONS
+              .catch((error) => { console.log(error); });
+        
+              // (F) PREVENT FORM SUBMIT
+              return false;
+            }
+            </script> -->
+    </head>
+    <body>
+        <div>
+        <h2>Fetch API-Sending forn <datagrid></datagrid></h2>
+        <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+            <label>
+                <div>
+                    Id: <input type="number" name="id" placeholder="1">
+                </div>                
+            </label>
+            <label>
+                <div>
+                    Name: <input type="text" name="name" placeholder="John Doe">
+                </div>
+            </label>
+            <label>
+                <div>
+                    Username: <input type="text" name="username" placeholder="john">
+                </div>
+            </label>
+            <label>
+                <div>
+                    Email: <input type="email" name="email" id="" placeholder="john@gmail.com">
+                </div>
+            </label>
+            <label>
+                <div>
+                    Address: 
+                    <div>
+                        <div>
+                            Street <input type="text" name="street">
+                        </div>
+                        <div>
+                            Suite <input type="text" name="suite">
+                        </div>
+                        <div>
+                            City <input type="text" name="city">
+                        </div>
+                        <div>
+                            Zipcode <input type="number" name="zipcode">
+                        </div>
+                        <div>
+                            Gio:
+                            <diV>
+                                Latitude <input type="number" name="lat">
+                            </diV>
+                            <diV>
+                                Longitude <input type="number" name="lng">
+                            </diV>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <div>
+                    Phone: <input type="number" name="phone">
+                </div>
+            </label>
+            <label>
+                <div>
+                    website: <input type="url" name="website">
+                </div>
+            </label>
+            <label>
+                <div>
+                    Company: {
+                    <div>
+                        Name: <input type="text" name="name">
+                    </div>
+                    <div>
+                        Chatchphrase: <input type="text" name="chatchphrase">
+                    </div>
+                    <div>
+                        Bs: <input type="text" name="bs">
+                    </div>
+                }
+                </div>
+            </label>
+            <div>
+                <input type="reset" value="Reset">
+            </div>
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
+
+<!-- <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+    <div>
+      <label for="say">What greeting do you want to say?</label>
+      <input name="say" id="say" value="Hi">
+    </div>
+    <div>
+      <label for="to">Who do you want to say it to?</label>
+      <input name="to" id="to" value="Mom">
+    </div>
+    <div>
+      <button>Send my greetings</button>
+    </div>
+  </form> -->
